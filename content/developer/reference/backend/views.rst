@@ -297,6 +297,12 @@ how the matched node should be altered:
     * if the ``attribute`` element has no body, the attribute named after
       its ``name`` is removed from the matched node. If no such attribute
       exists, an error is raised
+    * if the ``attribute`` element has an ``add`` attribute, the value of ``add`` is appended to the
+      value of the matched node's attribute named after ``name``. If the ``separator`` attribute is
+      provided, its value is inserted before the value of ``add``. If it is not provided, its
+      default value ``,`` is used instead.
+    * if the ``attribute`` element has a ``remove`` attribute, the value of ``remove`` is deleted
+      from the value of the matched node's attribute named after ``name``.
 
     .. code-block:: xml
 
@@ -305,8 +311,9 @@ how the matched node should be altered:
         <attribute name="attrs">
           {'invisible': [('sale_ok', '=', False)], 'readonly': [('editable', '=', False)]}
         </attribute>
+        <attribute name="class" remove="mt-2" separator=" "/>
+        <attribute name="class" add="mt-1" separator=" "/>
       </field>
-
 ``move``
   can be used as a direct child of a inheritance spec
   with a ``inside``, ``replace``, ``after`` or ``before`` ``position`` attribute
