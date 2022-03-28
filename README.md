@@ -8,7 +8,7 @@
 - [Python 3.7 or 3.8](https://www.odoo.com/documentation/15.0/contributing/documentation.html#python)
 - Python dependencies listed in the file [`requirements.txt`](https://github.com/odoo/documentation/tree/15.0/requirements.txt).
 - [Make](https://www.odoo.com/documentation/15.0/contributing/documentation.html#make)
-- A local copy of the [odoo/odoo repository in 15.0](https://github.com/odoo/odoo/tree/15.0) (Optional)
+- A local copy of the [odoo/odoo repository in 15.0](https://github.com/odoo/odoo/tree/15.0) 
 
 ### Instructions
 
